@@ -1,0 +1,82 @@
+{
+  "survey_title":"Customer Feedback Survey",
+  "survey_id":"survey123",
+  "description":"A survey to collect feedback on customer satisfaction.",
+  "total_questions":10,
+  "questions":{
+     "question_001":{
+        "type":"mcq",
+        "text":"How satisfied are you with our service?",
+        "description":"https://image.url.com/",
+        "is_required":"true",
+        "data":{
+           "options":[
+              {
+                 "value":"Very Satisfied",
+                 "sentiment":"positive"
+              },
+              {
+                 "value":"Satisfied",
+                 "sentiment":"positive"
+              },
+              {
+                 "value":"Not Satisfied",
+                 "sentiment":"negative"
+              },
+              {
+                 "value":"Neutral",
+                 "sentiment":"neutral"
+              }
+           ]
+        },
+        "depends_on":[
+           
+        ],
+        "next":{
+           "positive":"question_001",
+           "negative":"question_002",
+           "neutral":"question_003",
+           "no_sentiment":"question123"
+        }
+     },
+     "question_003":{
+        "type":"text_feild",
+        "text":"How was your expirence with our insurance ploicy?",
+        "description":"https://terms.and.conditiions.com/",
+        "is_required":"true",
+        "data":{
+           "input":{
+              "value":"placeholder value",
+              "sentiment":"no_sentiment"
+           }
+        },
+        "depends_on":[
+           {
+              "question_id":"question123",
+              "sentiment":"negative"
+           },
+           {
+              "question_id":"question123",
+              "sentiment":"ANY"
+           }
+        ],
+        "next":{
+           "positive":"",
+           "negative":"",
+           "neutral":"",
+           "no_sentiment":"question123"
+        }
+     }
+  },
+  "timestamp":"2024-11-05T10:30:00Z",
+  "tenant":"tenant123",
+  "channel_id":"1234567890",
+  "created_by":[
+     "admin_user",
+     "survey_manager"
+  ],
+  "theme_data":{
+     "logo":"https://example.com/logo.png",
+     "colors":"#3498db"
+  }
+}

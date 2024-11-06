@@ -1,0 +1,40 @@
+{
+    "response_id":"res1234",
+    "user_id":"user123",
+    "survey_id": "survey123",
+    "survey_title": "Customer Feedback Survey",
+    "description": "A survey to collect feedback on customer satisfaction.",
+    "responses": [
+        {
+          "question_id":"question_001",
+          "type": "mcq",
+          "text": "How satisfied are you with our service?",
+          "value":"satsified",
+          "sentiment":"positive",
+          "next":["question_002"],
+          "is_required":"true"
+          },
+        {
+          "question_id":"question_002",
+          "type": "text_field",
+          "text": "How was your expirence with our insurance ploicy?",
+          "value":"I was not able to claim my insurance",
+          "sentiment":"no_sentiment",
+          "next": ["end"],
+          "is_required":"true"
+        }
+    ],
+    "status":"completed",
+    "timetaken":200,
+    "total_questions": 10,
+    "questions_asked": 2,
+    "questions_answered": 2,
+    "response_timestamp":"2024-11-05T10:30:00Z",
+    "timestamp": "2024-11-05T10:30:00Z",
+    "tenant": "tenant123",
+    "channel_id": "1234567890",
+    "created_by": [
+      "admin_user",
+      "survey_manager"
+    ]
+}
